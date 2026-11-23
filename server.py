@@ -19,13 +19,8 @@ def sent_analyzer():
     '''
     # TODO
 
-    print("Route was called!")
-
     text_to_analyze = request.args.get('textToAnalyze')
-    print("Received text:", text_to_analyze)
-
     response = sentiment_analyzer(text_to_analyze)
-    print("Analyzer response:", response)
 
     label = response['label']
     score = response['score']
